@@ -1,0 +1,25 @@
+# ShipBench reproduction requirements (Python 3.10+)
+
+# Core
+numpy>=1.24
+scipy>=1.11
+pandas>=2.0
+
+# Frontier API SDKs
+anthropic>=0.40        # Claude Opus 4.7 inference
+openai>=1.50           # gpt-5.5 inference
+google-genai>=1.0      # Gemini inference (optional, preserved for reproducibility)
+
+# Open-weight inference (HuggingFace, optional)
+transformers>=4.40
+torch>=2.0
+Pillow>=10.0
+safetensors>=0.4
+
+# LoRA (open-weight SFT only)
+peft>=0.10
+accelerate>=0.27
+
+# Dataset / generation pipeline
+matplotlib>=3.7        # rendering section/compartment PNGs
+shapely>=2.0           # polygon geometry recovery
