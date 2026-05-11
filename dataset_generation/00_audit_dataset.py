@@ -1,5 +1,5 @@
 """
-Phase 0.2.A — Diversity Audit of current processed_R1 dataset.
+Phase 0.2.A — Diversity Audit of current processed dataset.
 
 Measures the 6 diversity axes:
   P1 Parameter coverage  — marginal + joint distribution of numeric params
@@ -42,7 +42,7 @@ import matplotlib.pyplot as plt
 
 SHIPS = ["BULKC", "CNTR", "LNGC", "LPGC", "Tanker", "VLCC"]
 REPO = Path(__file__).resolve().parents[1]
-DATA_DIR = REPO / "data" / "processed_R1"
+DATA_DIR = REPO / "data" / "processed"
 OUT_DIR = REPO / "outputs" / "audit"
 FIG_DIR = OUT_DIR / "figures"
 
@@ -369,7 +369,7 @@ def write_params_csv(all_rows: dict[str, list[dict]]) -> None:
 def write_report(all_rows, pstats, rule_summ, vdiv) -> None:
     total = sum(len(v) for v in all_rows.values())
     lines = [
-        "# Diversity Audit Report — processed_R1 (current)",
+        "# Diversity Audit Report — processed (current)",
         "",
         f"Total samples: **{total}** across {len(SHIPS)} ship types.",
         "",
