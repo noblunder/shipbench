@@ -10,7 +10,7 @@ For each candidate: renders section DXF/PNG, elevation DXF/PNG, 3D model DXF/PNG
 and writes the full JSON with rule evaluation + metadata.
 
 Output structure:
-  data/processed_R1/<ship>/
+  data/processed/<ship>/
     section_dxf/
     section_png/
     compart_dxf/
@@ -43,7 +43,7 @@ sys.path.insert(0, str(GEN_DIR))
 CANDIDATES_DIR = ROOT / "data" / "candidates_R1"
 STRATIFIED_DIR = CANDIDATES_DIR / "stratified"
 BORDERLINE_DIR = CANDIDATES_DIR / "borderline"
-OUTPUT_DIR = ROOT / "data" / "processed_R1"
+OUTPUT_DIR = ROOT / "data" / "processed"
 
 SHIPS = ["Tanker", "VLCC", "BULKC", "CNTR", "LNGC", "LPGC"]
 
@@ -167,10 +167,10 @@ def main():
     ships = args.ships or SHIPS
     t0 = time.time()
 
-    # Backup existing processed_R1 if needed
+    # Backup existing processed if needed
     backup_dir = ROOT / "data" / "processed_R0_backup"
     if OUTPUT_DIR.exists() and not backup_dir.exists():
-        print(f"Backing up existing data/processed_R1/ → data/processed_R0_backup/")
+        print(f"Backing up existing data/processed/ → data/processed_R0_backup/")
         shutil.copytree(OUTPUT_DIR, backup_dir)
 
     ship_stats = {}
