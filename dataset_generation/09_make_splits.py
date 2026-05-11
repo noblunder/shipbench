@@ -24,7 +24,7 @@ from collections import defaultdict
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent.parent
-MANIFEST = ROOT / "data" / "processed_R1" / "manifest.jsonl"
+MANIFEST = ROOT / "data" / "processed" / "manifest.jsonl"
 SPLITS_DIR = ROOT / "data" / "splits_v2"
 
 
