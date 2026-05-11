@@ -35,7 +35,7 @@ from typing import Any, Callable
 
 REPO_ROOT = Path(__file__).resolve().parents[1]
 GEN_DIR = REPO_ROOT / "data" / "data_generator"
-SAMPLES_ROOT = REPO_ROOT / "data" / "processed_R1"
+SAMPLES_ROOT = REPO_ROOT / "data" / "processed"
 OUT_PATH = REPO_ROOT / "outputs" / "audit" / "rule_state_rev2.json"
 PREV_PATH = REPO_ROOT / "outputs" / "audit" / "rule_state.json"
 
