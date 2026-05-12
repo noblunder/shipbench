@@ -2536,7 +2536,7 @@ def generate_cntr_dataset(
 # 예시 실행
 # ===============================
 if __name__ == "__main__":
-    _BASE = "<SHIPBENCH_ROOT>/data/processed_R1/CNTR"
+    _BASE = "<SHIPBENCH_ROOT>/data/processed/CNTR"
 
     SAVE_DIR        = os.path.join(_BASE, "section_dxf")
     PNG_DIR         = os.path.join(_BASE, "section_png")
