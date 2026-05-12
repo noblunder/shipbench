@@ -84,7 +84,7 @@ TOLERANCE_PCT = {
 #    dominated by interface compliance rather than task performance, so the task
 #    is reported diagnostically rather than as a main accuracy estimate."
 #
-# Constant committed before GPT-5.5 main inference launch on 2026-05-07.
+# Constant pre-specified before GPT-5.5 main inference launch.
 REFUSAL_THRESHOLD = 0.20
 
 
@@ -170,11 +170,11 @@ def main():
     ap.add_argument("--pred", required=True, help="GPT-5 prediction JSONL")
     ap.add_argument("--opus", default=None, help="Opus prediction JSONL (optional, for paired comparison)")
     ap.add_argument("--gt-files", nargs="*", default=[
-        "<SHIPBENCH_ROOT>/data/shipbench3d_v2/task_main_eval.jsonl",
-        "<SHIPBENCH_ROOT>/data/shipbench3d_v2/task_main_eval_opus_paired.jsonl",
-        "<SHIPBENCH_ROOT>/data/shipbench3d_v2/task_B3_v3_clarified.jsonl",
-        "<SHIPBENCH_ROOT>/data/shipbench3d_v2/task_B4_v3_cot.jsonl",
-        "<SHIPBENCH_ROOT>/data/shipbench3d_v2/task_C3_v3_clarified.jsonl",
+        "<SHIPBENCH_ROOT>/data/shipbench/task_main_eval.jsonl",
+        "<SHIPBENCH_ROOT>/data/shipbench/task_main_eval_opus_paired.jsonl",
+        "<SHIPBENCH_ROOT>/data/shipbench/task_B3_v3_clarified.jsonl",
+        "<SHIPBENCH_ROOT>/data/shipbench/task_B4_v3_cot.jsonl",
+        "<SHIPBENCH_ROOT>/data/shipbench/task_C3_v3_clarified.jsonl",
     ])
     ap.add_argument("--output", default=None, help="Output JSON (per-task classification)")
     ap.add_argument("--threshold", type=float, default=REFUSAL_THRESHOLD,
