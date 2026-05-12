@@ -27,7 +27,7 @@ from collections import defaultdict
 from pathlib import Path
 
 ROOT = Path("<SHIPBENCH_ROOT>")
-DEFAULT_GT = ROOT / "data" / "shipbench3d_v2" / "task_main_eval.jsonl"
+DEFAULT_GT = ROOT / "data" / "shipbench" / "task_main_eval.jsonl"
 
 TASK_TOL = {
     "B1_plate_thickness": 0.05,
