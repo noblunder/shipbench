@@ -247,13 +247,13 @@ def main():
 
     # Load all GT files (combine main + v3)
     gt_files = [
-        "<SHIPBENCH_ROOT>/data/shipbench3d_v2/task_main_eval.jsonl",
-        "<SHIPBENCH_ROOT>/data/shipbench3d_v2/task_main_eval_opus_paired.jsonl",
-        "<SHIPBENCH_ROOT>/data/shipbench3d_v2/task_A1_shiptype_section_only.jsonl",
-        "<SHIPBENCH_ROOT>/data/shipbench3d_v2/task_A1_v2_opus_paired.jsonl",
-        "<SHIPBENCH_ROOT>/data/shipbench3d_v2/task_B3_v3_clarified.jsonl",
-        "<SHIPBENCH_ROOT>/data/shipbench3d_v2/task_B4_v3_cot.jsonl",
-        "<SHIPBENCH_ROOT>/data/shipbench3d_v2/task_C3_v3_clarified.jsonl",
+        "<SHIPBENCH_ROOT>/data/shipbench/task_main_eval.jsonl",
+        "<SHIPBENCH_ROOT>/data/shipbench/task_main_eval_opus_paired.jsonl",
+        "<SHIPBENCH_ROOT>/data/shipbench/task_A1_shiptype_section_only.jsonl",
+        "<SHIPBENCH_ROOT>/data/shipbench/task_A1_v2_opus_paired.jsonl",
+        "<SHIPBENCH_ROOT>/data/shipbench/task_B3_v3_clarified.jsonl",
+        "<SHIPBENCH_ROOT>/data/shipbench/task_B4_v3_cot.jsonl",
+        "<SHIPBENCH_ROOT>/data/shipbench/task_C3_v3_clarified.jsonl",
     ]
     gt_by_id = {}
     for f in gt_files:
