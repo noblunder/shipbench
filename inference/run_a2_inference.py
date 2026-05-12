@@ -3,7 +3,7 @@
 A2 multi-view inference runner for ShipBench.
 
 Loads section_png + (compart_png OR compart3d_png) per A2 item and queries
-the model with both images. Output format compatible with eval_shipbench3d.py.
+the model with both images. Output format compatible with eval_main.py.
 
 Usage:
     python scripts/run_a2_inference.py \
@@ -19,8 +19,8 @@ import time
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent.parent
-QA_DIR = ROOT / "data" / "shipbench3d"
-PROCESSED = ROOT / "data" / "processed_R1"
+QA_DIR = ROOT / "data" / "shipbench"
+PROCESSED = ROOT / "data" / "processed"
 HF_CACHE = "<SHIPBENCH_ROOT>/hf_cache"
 
 SYSTEM_PROMPT = (
