@@ -20,8 +20,8 @@ import time
 from pathlib import Path
 
 ROOT = Path("<SHIPBENCH_ROOT>")
-GT_PATH = ROOT / "data" / "shipbench3d_v2" / "task_main_eval.jsonl"
-PROCESSED = ROOT / "data" / "processed_R1"
+GT_PATH = ROOT / "data" / "shipbench" / "task_main_eval.jsonl"
+PROCESSED = ROOT / "data" / "processed"
 
 MODEL_ID = "claude-opus-4-7"  # latest Opus
 SYSTEM_PROMPT = (
@@ -70,7 +70,7 @@ def main():
     ap.add_argument("--output", required=True)
     ap.add_argument("--n-per-task", type=int, default=50)
     ap.add_argument("--task-file", type=str, default=None,
-        help="Path to task jsonl. Defaults to data/shipbench3d_v2/task_main_eval.jsonl")
+        help="Path to task jsonl. Defaults to data/shipbench/task_main_eval.jsonl")
     ap.add_argument("--tasks", type=str, default=None,
         help="Comma-separated task names to run. Defaults to all 9 main tasks.")
     ap.add_argument("--seed", type=int, default=42)
