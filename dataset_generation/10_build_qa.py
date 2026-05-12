@@ -3,7 +3,7 @@
 Phase 1.2 — QA Auto-Generator for ShipBench.
 
 Generates Task A (Multi-View VQA) and Task B (Rule-Grounded Reasoning) QA items
-from candidate JSONs in data/processed_R1/.
+from candidate JSONs in data/processed/.
 
 Task A sub-tasks:
   A1: Member presence (yes/no) — "Does this section show a [member]?"
@@ -29,8 +29,8 @@ import time
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent.parent
-PROCESSED = ROOT / "data" / "processed_R1"
-QA_DIR = ROOT / "data" / "shipbench3d"
+PROCESSED = ROOT / "data" / "processed"
+QA_DIR = ROOT / "data" / "shipbench"
 SHIPS = ["Tanker", "VLCC", "BULKC", "CNTR", "LNGC", "LPGC"]
 
 # ═════════════════════════════════════════════════════════════════════
