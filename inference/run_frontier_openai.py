@@ -26,8 +26,8 @@ from concurrent.futures import ThreadPoolExecutor, as_completed
 from pathlib import Path
 
 ROOT = Path("<SHIPBENCH_ROOT>")
-GT_PATH = ROOT / "data" / "shipbench3d_v2" / "task_main_eval.jsonl"
-PROCESSED = ROOT / "data" / "processed_R1"
+GT_PATH = ROOT / "data" / "shipbench" / "task_main_eval.jsonl"
+PROCESSED = ROOT / "data" / "processed"
 
 DEFAULT_MODEL = "gpt-5"
 SYSTEM_PROMPT = (
