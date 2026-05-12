@@ -11,7 +11,7 @@ Native-resolution image support; no detail=high parameter needed.
 Usage:
   export GOOGLE_API_KEY=AIza...
   python scripts/run_frontier_gemini.py \
-      --task-file data/shipbench3d_v2/task_main_eval_opus_paired.jsonl \
+      --task-file data/shipbench/task_main_eval_opus_paired.jsonl \
       --output outputs/frontier_eval/gemini25pro_main.jsonl \
       --n-per-task 200 --max-tokens 4096 --thinking-budget 1024
 
@@ -29,10 +29,10 @@ from concurrent.futures import ThreadPoolExecutor, as_completed
 from pathlib import Path
 
 ROOT = Path("<SHIPBENCH_ROOT>")
-GT_PATH = ROOT / "data" / "shipbench3d_v2" / "task_main_eval.jsonl"
-PROCESSED = ROOT / "data" / "processed_R1"
+GT_PATH = ROOT / "data" / "shipbench" / "task_main_eval.jsonl"
+PROCESSED = ROOT / "data" / "processed"
 
-DEFAULT_MODEL = "gemini-3.1-pro-preview"  # Google flagship as of 2026-05-07; was gemini-2.5-pro before pivot
+DEFAULT_MODEL = "gemini-3.1-pro-preview"  # Google flagship at submission time; gemini-2.5-pro is the fallback
 SYSTEM_PROMPT = (
     "You are a ship-structural-design assistant. Answer the user's question about the provided "
     "ship-structural drawing(s) in the exact format requested. Output only the answer, no explanation."
