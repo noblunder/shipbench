@@ -3194,7 +3194,7 @@ def generate_lngc_dataset(
 # 예시 실행
 # ===============================
 if __name__ == "__main__":
-    _BASE = "<SHIPBENCH_ROOT>/data/processed_R1/LNGC"
+    _BASE = "<SHIPBENCH_ROOT>/data/processed/LNGC"
 
     SAVE_DIR        = os.path.join(_BASE, "section_dxf")
     PNG_DIR         = os.path.join(_BASE, "section_png")
