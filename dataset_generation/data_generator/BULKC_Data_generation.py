@@ -2263,7 +2263,7 @@ def generate_bulkc_dataset(
 
 # ---------- example ----------
 if __name__ == "__main__":
-    _BASE = "<SHIPBENCH_ROOT>/data/processed_R1/BULKC"
+    _BASE = "<SHIPBENCH_ROOT>/data/processed/BULKC"
 
     SAVE_DIR        = os.path.join(_BASE, "section_dxf")
     PNG_DIR         = os.path.join(_BASE, "section_png")
