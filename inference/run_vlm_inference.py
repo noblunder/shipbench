@@ -3,8 +3,8 @@
 Local VLM inference runner for ShipBench.
 
 Loads an open-source VLM (default: Qwen3-VL-8B-Instruct), runs it against QA
-items in data/shipbench3d/, and writes predictions.jsonl for use with
-eval_shipbench3d.py.
+items in data/shipbench/, and writes predictions.jsonl for use with
+eval_main.py.
 
 Usage:
     # Pilot (100 samples, mix of tasks)
@@ -27,8 +27,8 @@ import time
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent.parent
-QA_DIR = ROOT / "data" / "shipbench3d"
-PROCESSED = ROOT / "data" / "processed_R1"
+QA_DIR = ROOT / "data" / "shipbench"
+PROCESSED = ROOT / "data" / "processed"
 
 
 # ═══════════════════════════════════════════════════════════════
