@@ -17,7 +17,7 @@ from collections import defaultdict
 from pathlib import Path
 
 ROOT = Path("<SHIPBENCH_ROOT>")
-V2 = ROOT / "data" / "shipbench3d_v2"
+V2 = ROOT / "data" / "shipbench"
 
 # Task → ground-truth file (3-tier IDs).
 # B3 = cargo-capacity (7 variants), B4 = section-area (5 variants), C3 = bulkhead-position.
