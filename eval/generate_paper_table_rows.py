@@ -159,8 +159,8 @@ def main():
     ap.add_argument("--gemini", required=True)
     ap.add_argument("--classifier", required=True)
     ap.add_argument("--gt-files", nargs="*", default=[
-        "<SHIPBENCH_ROOT>/data/shipbench3d_v2/task_main_eval.jsonl",
-        "<SHIPBENCH_ROOT>/data/shipbench3d_v2/task_main_eval_opus_paired.jsonl",
+        "<SHIPBENCH_ROOT>/data/shipbench/task_main_eval.jsonl",
+        "<SHIPBENCH_ROOT>/data/shipbench/task_main_eval_opus_paired.jsonl",
     ])
     ap.add_argument("--out", required=True)
     args = ap.parse_args()
@@ -232,7 +232,7 @@ def main():
 %        task performance, so the task is reported diagnostically (Appendix~\\ref{app:gpt55_diagnostic})
 %        rather than as a main accuracy estimate. Tasks marked '---' for GPT-5.5 are diagnostic-only.
 % \\,$^d$~A1-stype is the section-only (v2) reformulation. \\,$^e$~Opus on A1-v2 (section-only).
-% Three frontier vendors selected at submission time (2026-05-07), all latest flagships within
+% Three frontier vendors selected at submission time, all latest flagships within
 % a 3-week release window. ...}""")
 
     # Appendix diagnostic table
