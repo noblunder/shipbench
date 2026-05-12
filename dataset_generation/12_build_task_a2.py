@@ -18,7 +18,7 @@ Sub-tasks:
   A2.count  — Multi-view consistency ("How many cargo holds; verify section
               shows the cargo tank cross-section.")
 
-Output: data/shipbench3d/task_A2.jsonl
+Output: data/shipbench/task_A2.jsonl
 
 Usage:
     python scripts/12_build_task_a2.py
@@ -33,8 +33,8 @@ import time
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent.parent
-PROCESSED = ROOT / "data" / "processed_R1"
-QA_DIR = ROOT / "data" / "shipbench3d"
+PROCESSED = ROOT / "data" / "processed"
+QA_DIR = ROOT / "data" / "shipbench"
 SHIPS = ["Tanker", "VLCC", "BULKC", "CNTR", "LNGC", "LPGC"]
 
 SHIP_DISPLAY = {
