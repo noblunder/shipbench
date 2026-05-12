@@ -5,7 +5,7 @@ Phase 1.2.C — Task C (Design Generation) QA builder for ShipBench.
 C1: Spec-to-params — NL design spec → generator_inputs JSON
 C2: Compliance-aware — NL spec + "must comply with X" → compliant JSON
 
-Reads from data/processed_R1/<ship>/json/ and generates QA items.
+Reads from data/processed/<ship>/json/ and generates QA items.
 
 Usage:
     python scripts/11_build_task_c.py
@@ -20,8 +20,8 @@ import time
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent.parent
-PROCESSED = ROOT / "data" / "processed_R1"
-QA_DIR = ROOT / "data" / "shipbench3d"
+PROCESSED = ROOT / "data" / "processed"
+QA_DIR = ROOT / "data" / "shipbench"
 SHIPS = ["Tanker", "VLCC", "BULKC", "CNTR", "LNGC", "LPGC"]
 
 # ═════════════════════════════════════════════════════════════════════
